@@ -1,35 +1,19 @@
 const projectId = 'tanand';
 
 exports.api = {
-    port: 8080,
+    port: 1883,
 };
 
 exports.influx = {
     url: 'http://localhost:8086',
-    bucket: projectId,
-    org: '',
-    token: '',
+    bucket: 'Dashboard',
+    org: 'Tanand',
+    token: 'k1vagpHD5PNM1-mmjv4p0hW7F5CQ7C-CVaTcvxVAPNTQgcMNe-IXyWQnxN0cKrR8Ja7TV48Y61vZHdBm3eDD9w==',
 };
 
 exports.mqtt = {
     host: 'localhost',
-    topicPrefix: `${projectId}/`,
+    // topicPrefix: `${projectId}/`,
 };
 
-exports.postgres = {
-    host: 'localhost',
-    port: 5432,
-    user: '',
-    password: '',
-    database: projectId,
-};
 
-exports.redis = {
-    host: 'localhost',
-    port: 6379,
-    namespace: projectId,
-};
-
-exports.telegram = {
-    endpoint: '',
-};

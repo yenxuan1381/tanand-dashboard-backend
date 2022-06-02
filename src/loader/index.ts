@@ -3,9 +3,9 @@ import logger from 'logger';
 export default async function loader(): Promise<void> {
     const log = logger('LOADER');
 
-    log.info('Loading Postgresql');
-    await (await import('@/services/postgres')).init();
-    log.info('Postgresql loaded');
+    // log.info('Loading Postgresql');
+    // await (await import('@/services/postgres')).init();
+    // log.info('Postgresql loaded');
 
     log.info('Loading jobs');
     await (await import('@/jobs')).default();

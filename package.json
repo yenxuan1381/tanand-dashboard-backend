@@ -1,5 +1,5 @@
 {
-  "name": "node-template-ts",
+  "name": "tanand-dashboard-backend",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -12,7 +12,7 @@
     "start": "node ."
   },
   "keywords": [],
-  "author": "",
+  "author": "yenxuan1381",
   "license": "ISC",
   "dependencies": {
     "@influxdata/influxdb-client": "^1.26.0",
