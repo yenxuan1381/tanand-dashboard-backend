@@ -1,8 +1,8 @@
 import { datetime, write } from '@/services/influx';
+import { emitToSocket } from '@/api';
 import type { pointData } from '~/mqtt';
 import mqtt from '@/services/mqtt';
 import logger from 'logger';
-
 
 export default async function subscribers(): Promise<void> {
     const log = logger('SUBSCRIBERS');
@@ -12,7 +12,9 @@ export default async function subscribers(): Promise<void> {
 
         mqtt.subscribe(`site-a/data/${deviceId}/ambient`, (topic, payload)=>{
             const data = JSON.parse(payload.toString()) as pointData
+            emitToSocket(data)
             log.info('Subscribe success', payload)
+
 
             write({
                 measurement: "ambient",

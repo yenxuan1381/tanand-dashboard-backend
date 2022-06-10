@@ -29,7 +29,9 @@
     "mqtt": "^4.3.7",
     "mqtt-match": "^3.0.0",
     "node-telegram-bot-api": "^0.57.0",
-    "pg": "^8.7.3"
+    "pg": "^8.7.3",
+    "rxjs": "^7.5.5",
+    "socket.io": "^4.5.1"
   },
   "devDependencies": {
     "@types/config": "0.0.41",

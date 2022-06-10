@@ -15,3 +15,4 @@ export interface Request<
 > extends e.Request<Params, ResBody, ReqBody, ReqQuery> {}
 
 export interface Response<ResBody extends ResponseBody = undefined> extends e.Response<ResBody> {}
+

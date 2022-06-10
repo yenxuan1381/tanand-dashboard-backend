@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            (async function () {
+                const res = await fetch('http://localhost:9999/chart?start=1654826334&end=1655431134');
+                console.log(res);
+                console.log(await res.json());
+            })();
+        </script>
+    </body>
+</html>

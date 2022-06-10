@@ -67,7 +67,7 @@ export default class InfluxService {
     }
 
     private writePoint(payload: Payload): void {
-        const { measurement, timestamp, tags, fields } = payload;
+        const { measurement, timestamp, tags, fields } = payload; 
         const point = new Point(measurement).timestamp(timestamp);
 
         Object.entries(tags).forEach(([key, val]) => point.tag(key, val));
@@ -88,4 +88,6 @@ export default class InfluxService {
         });
         this.writeApi.writePoint(point);
     }
+
+    
 }
