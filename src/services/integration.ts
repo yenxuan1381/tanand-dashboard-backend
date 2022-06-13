@@ -8,10 +8,6 @@ const log = logger('INTEGRATION');
 log.setSettings({ minLevel });
 
 export async function getChartData(
-    // deviceID: string,
-    // duration: number | undefined,
-    // field: string,
-    // smoothness: number,
     start: number | undefined,
     end: number | undefined
 ): Promise<Array<Device.DataPoint>> {
@@ -21,7 +17,7 @@ export async function getChartData(
         from(bucket: "dashboard")
         |> range(start: ${start}, stop: ${end})
         |> filter(fn: (r) => r["_measurement"] == "ambient")
-        |> aggregateWindow(every: 1m, fn: mean, createEmpty: false)
+        |> aggregateWindow(every: 10m, fn: mean, createEmpty: false)
         
         `
     );

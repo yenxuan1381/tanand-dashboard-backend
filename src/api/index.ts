@@ -33,31 +33,6 @@ const io = new Server(server, {
     }
 });
 
-// app.get('/chart/:start/:end', (req, res) => {
-//     const start = req.params.start
-//     const end = req.params.end
-//     let q: Promise<Array<DeviceQuery>> = query(
-//         `
-//         from(bucket: "dashboard")
-//         |> range(start: ${start}, stop: ${end})
-//         |> filter(fn: (r) => r["_measurement"] == "ambient")
-//         |> aggregateWindow(every: 1m, fn: mean, createEmpty: false)
-        
-//         `
-//     )
-//     q.then((r) => {
-//         let history = r.map((device) => {
-//     //         // if (device._field === information) {
-//     //         //     return {
-//     //         //         time: device._time,
-//     //         //         value: device._value
-//     //         //     }
-//     //         // }
-//         })
-//         res.json(history)
-
-//     })
-// })
 
 server.listen(port, () => {
     log.info(
